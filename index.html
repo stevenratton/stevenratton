@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+
+            <!-- CSS -->
+            <link href="./css/bootstrap.min.css" rel="stylesheet" />
+            <link href="./css/animate.css" rel="stylesheet" /> 
+            <link href="./css/custom.css" rel="stylesheet" />
+            <link href="./css/font-awesome.min.css" rel="stylesheet"></link>
+            <link href='http://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
+
+            <!-- SCRIPT -->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+            <script src="./js/bootstrap.min.js"></script>
+            <script type="text/javascript" src="./js/afficher_cacher_div.js"></script>
+
+            <!-- SCRIPT SCROLL CLIC-->
+            <script>
+                $(document).ready(function() {
+                    $('.scrollTo').click( function() { // Au clic sur un élément
+                        var page = $(this).attr('href'); // Page cible
+                        var speed = 800; // Durée de l'animation (en ms)
+                        $('html, body').animate( { scrollTop: $(page).offset().top }, speed ); // Go
+                        return false;
+                    });
+                });
+            </script>
+        </head>
+
+        <body>
+            <header>
+                <div id="avatar"></div>
+                <h1>Steven Ratton</h1>
+                <h2>License's student in Master's degree in Business Informatics</h2>
+                <h3>(MIAGE Bordeaux)<h3>
+            </header>
+            <main>
+                <div id="presentation">
+                    <p>
+                    Hi ! I'm Steven, a French student who loves coding or managing interesting projects, creating graphic picture, logo or flyer but also movie maker.
+                    </p>
+                    <p>
+                    I'm following a French Master's Programme with a major in Business and a minor in Informatics.
+                    </p>
+                    <p>
+                    Last summer I worked in <a target="_blank" href="http://en.wikipedia.org/wiki/French_Institute_for_Research_in_Computer_Science_and_Automation">French National Institute for computer science and applied mathematics (INRIA)</a> with a research team name <a target="_blank" href="https://team.inria.fr/potioc/">POTIOC</a> and created new logo's team and worked on dice game in augmented reality:
+                    <p>
+                    You can look at some of my works on my <a target="_blank" href="/">portfolio</a>. My resume is available <a target="_blank" href="/">here</a>, I'm also on <a target="_blank" href="https://fr.linkedin.com/pub/steven-ratton/66/915/a82">LinkedIn</a>.
+                    </p>
+                    <p>
+                    Feel free to <a target="_blank" href="/">contact me</a>,
+                    </p>
+
+                    <div id="pages">
+                        <div class="col-sm-4" id="page">
+                          <a class="scrollTo" href="html">Presentation</a>
+                        </div>
+                        <div class="col-sm-4" id="page">
+                          <a class="scrollTo" href="#portfolio">Portfolio</a>
+                        </div>
+                        <div class="col-sm-4" id="page">
+                          <a class="scrollTo" href="#page-3">Class</a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- GAMING LOGOS -->
+                <div class="row" id="portfolio">
+                    <h1>Gaming Logos</h1>
+                    <div class="container">
+                        <div class="switch">
+                            <div class="switch-back"></div>
+
+                            <input type="radio" class="switch-input" name="switch" value="off" id="off1" checked>
+                            <label for="off1" class="switch-label-left switch-label-off" onclick="javascript:afficher_cacher('cache1');"><span>Off</span></label>
+                            <div class="label-off"><div>off</div></div>
+
+                            <input type="radio" class="switch-input" name="switch" value="on" id="on1" >
+                            <label for="on1" class="switch-label-right switch-label-on" onclick="javascript:afficher_cacher('cache1');"><span>On</span></label>
+                            <div class="label-on"><div>on</div></div>
+
+                            <span class="switch-selection"></span>
+                      </div>
+                    </div>
+
+                    <div id="cache1" class="cache1">
+
+                        <div id="slider-img1" class="carousel slide" data-ride="carousel">
+                   
+                                <ol class="carousel-indicators">
+                                    <li class="active"  data-slide-to="0" data-target="#slider-img1"></li>
+                                    <li class="" data-slide-to="1" data-target="#slider-img1"></li>
+                                    <li class="" data-slide-to="2" data-target="#slider-img1"></li>
+                                    <li class="" data-slide-to="3" data-target="#slider-img1"></li>
+                                </ol>
+
+
+                                <div class="carousel-inner" role="listbox">
+                                    <div class="item active">
+                                        <img alt="obstruxion" src="./img/obstruxion.png"></img>
+                                    </div>
+                                    <div class="item">
+                                        <img alt="hazeryon" src="./img/hazeryon.png"></img>
+                                    </div>
+                                    <div class="item">
+                                        <img alt="piratebay" src="./img/piratebay.png"></img>
+                                    </div>
+                                    <div class="item">
+                                        <img alt="elysium" src="./img/elysium.png"></img>
+                                    </div>
+                                </div>
+                            
+                                <a class="left carousel-control" data-slide="prev" role="button" href="#slider-img1">
+                                    <span class="fa fa-chevron-left"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="right carousel-control" data-slide="next" role="button" href="#slider-img1">
+                                        <span class="fa fa-chevron-right"></span>
+                                        <span class="sr-only">Next</span>
+                                </a>
+                        </div>
+
+                        <div class="col-sm-6" id="bloc-image">
+                            <div id="information">
+                                <h5>2015</h5>
+                                <img alt="" src="img/separate.png" />
+                                <h5>Obstruxion</h5>
+                            </div>
+                            <div id="logoPortfolio">
+                                <img alt="" src="./img/obstruxion.png" />
+                            </div>
+                            <div id="textPortfolio">
+                                <h4>Team</h4>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6" id="bloc-image">
+                            <div id="information">
+                                <h5>2014</h5>
+                                <img alt="" src="img/separate.png" />
+                                <h5>Hazeryon</h5>
+                            </div>
+                            <div id="logoPortfolio">
+                                <img alt="" src="./img/hazeryon.png" />
+                            </div>
+                            <div id="textPortfolio">
+                                <h4>Team</h4>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6" id="bloc-image">
+                            <div id="information">
+                                <h5>2014</h5>
+                                <img alt="" src="img/separate.png" />
+                                <h5>Pirate Bay</h5>
+                            </div>
+                            <div id="logoPortfolio">
+                                <img alt="" src="./img/piratebay.png" />
+                            </div>
+                            <div id="textPortfolio">
+                                <h4>Team</h4>
+                            </div>
+                        </div>
+                        <div class="col-sm-6" id="bloc-image">
+                            <div id="information">
+                                <h5>2013</h5>
+                                <img alt="" src="img/separate.png" />
+                                <h5>Elysium</h5>
+                            </div>
+                            <div id="logoPortfolio">
+                                <img alt="" src="./img/elysium.png" />
+                            </div>
+                            <div id="textPortfolio">
+                                <h4>Website</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <script type="text/javascript">afficher_cacher('cache1');</script>
+
+                </div>        
+
+
+                <!-- COMPAGNY LOGOS -->   
+                <div class="row" id="portfolio">
+                    <h1>Company Logos</h1>
+
+                    <div class="container">
+                        <div class="switch">
+                            <div class="switch-back"></div>
+
+                                <input type="radio" class="switch-input" name="switch2" value="off" id="off2" checked>
+                                <label for="off2" class="switch-label-left switch-label-off" onclick="javascript:afficher_cacher('cache2');"><span>Off</span></label>
+                                <div class="label-off"><div>off</div></div>
+                                
+                                <input type="radio" class="switch-input" name="switch2" value="on" id="on2">
+                                <label for="on2" class="switch-label-right switch-label-on" onclick="javascript:afficher_cacher('cache2');"><span>On</span></label>
+                                <div class="label-on"><div>on</div></div>
+
+                                <span class="switch-selection"></span>
+
+                            </div>
+                        </div>
+
+                        <div id="cache2" class="cache2">
+
+                            <div id="slider-img2" class="carousel slide" data-ride="carousel">
+                       
+                                    <ol class="carousel-indicators">
+                                        <li class="active" data-slide-to="0" data-target="#slider-img2"></li>
+                                        <li  class="" data-slide-to="1" data-target="#slider-img2"></li>
+                                    </ol>
+
+
+                                    <div class="carousel-inner" role="listbox">
+
+                                        <div class="item active">
+                                            <img alt="potioc" src="./img/potioc.png"></img>
+                                        </div>
+                                        <div class="item">
+                                            <img alt="ajldiffusion" src="./img/ajldiffusion.png"></img>
+                                        </div>
+
+                                    </div>
+                                
+                                    <a class="left carousel-control" data-slide="prev" role="button" href="#slider-img2">
+                                        <span class="fa fa-chevron-left"></span>
+                                        <span class="sr-only">Previous</span>
+                                    </a>
+                                    
+                                    <a class="right carousel-control" data-slide="next" role="button" href="#slider-img2">
+                                            <span class="fa fa-chevron-right"></span>
+                                            <span class="sr-only">Next</span>
+                                    </a>
+
+                            </div>
+
+                            <div class="col-sm-6" id="bloc-image">
+                                <div id="information">
+                                    <h5>2014</h5>
+                                    <img alt="" src="img/separate.png" />
+                                    <h5>INRIA Potioc</h5>
+                                </div>
+                                <div id="logoPortfolio">
+                                    <img alt="" src="./img/potioc.png" />
+                                </div>
+                                 <div id="textPortfolio">
+                                        <h4>INRIA Team</h4>
+                                </div>
+                            </div>
+                            <div class="col-sm-6" id="bloc-image">
+                                <div id="information">
+                                    <h5>2013</h5>
+                                    <img alt="" src="img/separate.png" />
+                                    <h5>Ajl Diffusion</h5>
+                                </div>
+                                <div id="logoPortfolio">
+                                    <img alt="" src="./img/ajldiffusion.png" />
+                                </div>
+                                 <div id="textPortfolio">
+                                        <h4>Show Company</h4>
+                                </div>
+                            </div>
+                        </div>
+
+                        <script type="text/javascript">afficher_cacher('cache2');</script>
+
+                    </div>             
+                </div>
+
+                <div class="col-sm-4" id="page">
+                    <a class="scrollTo" href="html">Presentation</a>
+                </div>
+                <div class="col-sm-4" id="page">
+                    <a class="scrollTo" href="#portfolio">Portfolio</a>
+                </div>
+                <div class="col-sm-4" id="page">
+                    <a class="scrollTo" href="#page-3">Class</a>
+                </div>
+
+            </main>
+
+            <footer>
+
+            </footer>
+            
+        </body>
+    </html>
