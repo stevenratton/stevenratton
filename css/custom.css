@@ -1,0 +1,382 @@
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+body {
+    height: 200%;
+    color: #616161;
+	  text-rendering: optimizelegibility;
+	  font: 16px/1 'Roboto Slab', serif;
+}
+
+header {
+  	width: 40%;
+    min-width: 320px; 
+  	margin: auto;
+  	margin-top: 40px;
+    padding-top: 40px;
+    border-top: 1px solid #E0E0E0;
+    border-bottom: 1px solid #E0E0E0;
+    margin-bottom: 11px;
+    padding-bottom: 11px;
+    text-align: center;
+    position: relative;
+}
+
+main {
+  	width: 40%;
+    min-width: 320px; 
+  	margin: auto;    
+    padding-top: 40px;
+    padding-bottom: 11px;
+    position: relative;
+}
+
+#avatar {
+    width: 150px;
+    height: 230px;
+    margin-bottom: 10px;
+    background-image: url("../img/avatar.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-radius: 30%;
+    display: inline-block;
+}
+
+
+/**** PRESENTATION ****/
+
+#presentation {
+    margin-bottom: 100px;
+    text-align: justify;
+}
+
+.menu {
+    width: 100%;
+    height: 20px;
+    margin-top: 10%;
+    margin-left: -2.5%;
+}
+
+#pages {
+    width: 100%;
+    margin-bottom: 20%;
+}
+
+#page {
+    margin-top: 10%; 
+    text-align: center;
+}
+
+h1 {
+    font-weight: 500;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+h3 {
+    font-size: 16px;
+    margin-top: 0px;
+}
+
+p {
+    line-height: 1.6;
+}
+
+
+/**** PORTFOLIO ****/
+
+#portfolio {
+    width: 100%;
+    color: #848080;
+    text-align: center;
+    margin: auto;
+}
+
+#portfolio h1{
+    margin-top: 10%;
+    margin-bottom: 5%;
+}
+
+
+/**** BOUTON ON-OFF ****/
+
+.container {
+  position: relative;
+  margin: 43px auto;
+  width: 100%;
+  text-align: center;
+}
+
+.switch {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  height: 44px;
+  width: 54px;
+  border-radius: 10px;
+  z-index: 2;
+}
+
+.switch:before, .switch:after { 
+  content: " ";
+  position: absolute;
+  top: 2px;
+  margin: 0;
+  height: 36px;
+  width: 36px;
+  background: #69727F;
+  border: 3px solid #dddddd;
+  border-radius: 6px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform:    rotate(45deg);
+  -o-transform:      rotate(45deg);
+  -ms-transform:     rotate(45deg);
+  transform:         rotate(45deg);
+  z-index: 1;
+}
+
+.switch:before { 
+  left: -18px;
+}
+
+.switch:after { 
+
+}
+
+.switch-back {
+    position: absolute;
+    top: -3.5px;
+    left: -3.7px;
+    margin: 0px auto;
+    height: 46.5px;
+    width: 67.2px;
+    background: #69727F;
+    border-top: 3px solid #dddddd;
+    border-bottom: 3px solid #dddddd;
+    border-radius: 6px;
+    z-index: 2;
+}
+
+.switch-input {
+  .display: none;
+}
+
+.switch-label-left, .switch-label-right {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -19px;
+  width: 72%;
+  height: 100%;
+  color: transparent;
+  text-indent: -999px;
+  overflow: hidden;
+  cursor: pointer;
+  .background: rgba(255,0,0,0.1);
+  z-index: 3;
+}
+
+.switch-label-right {
+  left: auto;
+  right: -19px;
+  width: 72%;
+}
+
+.switch-input:checked + .switch-label {
+  -webkit-transition: 0.2s ease-out;
+  -moz-transition:    0.2s ease-out;
+  -o-transition:      0.2s ease-out;
+  transition:         0.2s ease-out;
+}
+
+.switch-input:checked + .switch-label-on ~ .switch-selection {
+  left: 41px;
+  -webkit-box-shadow: 0px 0px 25px rgba(150,255,50,0.3), 1px 1px 10px rgba(0,0,0,0.8), inset 0px 0px 0px 3px #B0CD61;
+  box-shadow: 0px 0px 25px rgba(150,255,50,0.3), 1px 1px 10px rgba(0,0,0,0.8), inset 0px 0px 0px 3px #B0CD61;
+}
+
+.switch-input:checked + .switch-label-off ~ .switch-selection {
+  -webkit-box-shadow: 0px 0px 25px rgba(255,0,0,0.2), 1px 1px 10px rgba(0,0,0,0.8), inset 0px 0px 0px 3px #E4837B;
+  box-shadow: 0px 0px 25px rgba(255,0,0,0.2), 1px 1px 10px rgba(0,0,0,0.8), inset 0px 0px 0px 3px #E4837B;
+}
+
+
+.switch-selection {
+  display: block;
+  position: absolute;
+  top: 3px;
+  left: -15px;
+  margin: 4px;
+  width: 25px;
+  height: 25px;
+  background: #FFF;
+  border: 2px solid #FFF;
+  border-radius: 3px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform:    rotate(45deg);
+  -o-transform:      rotate(45deg);
+  -ms-transform:     rotate(45deg);
+  transform:         rotate(45deg);
+  -webkit-transition: left 0.15s ease-out;
+  -moz-transition: left 0.15s ease-out;
+  -o-transition: left 0.15s ease-out;
+  transition: left 0.15s ease-out;
+  z-index: 999;
+}
+
+
+.label-on, .label-off {
+  display: block;
+  position: absolute;
+  top: 3px;
+  margin: 4px;
+  width: 25px;
+  height: 25px;
+  background: rgba(0,0,0,0.1);
+  border-radius: 3px;
+  color: #FFFFFF;
+  font-size: 0.85em;
+  text-align: center;
+  line-height: 24px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform:    rotate(45deg);
+  -o-transform:      rotate(45deg);
+  -ms-transform:     rotate(45deg);
+  transform:         rotate(45deg);
+  z-index: 2;
+}
+
+.label-on { 
+  right: -21px; 
+}
+
+.label-off { 
+  left: -15px; 
+}
+
+.label-on div, .label-off div {
+  -webkit-transform: rotate(-45deg) !important;
+  -moz-transform:    rotate(-45deg);
+  -o-transform:      rotate(-45deg);
+  -ms-transform:     rotate(-45deg);
+  transform:         rotate(-45deg) !important;
+  z-index: -1;
+}
+
+.red   { 
+  background: #E4837B; 
+}
+.green { 
+  background: #B0CD61; 
+}
+
+
+/**** BLOC-IMAGE ****/
+
+#bloc-image {
+    margin: auto;
+    text-align: center;
+    border: 2px #dddddd solid;
+}
+
+#information {
+    width: 100%;
+    height: 20%;
+    border-bottom: 1px #dddddd solid;
+    margin-bottom: 4%;
+}
+
+
+#information img{
+    height: 25px;
+    display: inline;
+}  
+
+#information h5{
+    font-size: 75%;
+    width: 30%;
+    display: inline;
+    margin-right: 2%;
+}
+
+#logoPortfolio {
+    margin: auto;
+}
+
+#logoPortfolio  img{
+    width: 50%;
+    height: 50%;
+}
+
+#textPortfolio {
+    width: 100%;
+    height: 10%;
+}
+
+#textPortfolio h4{
+    font-style: italic;
+    font-size: 12px;
+    margin: auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    text-transform: uppercase;
+}
+
+
+/**** Carousel ****/
+
+
+#slider-img1, #slider-img2, #slider-img3 {
+    width: 100%;
+    border: 2px #dddddd solid;
+    background-color: #f2f1ef;
+}
+
+.carousel-control {
+    color: #FFF !important;
+    text-shadow: none;
+}
+
+.carousel-control span {
+    position: absolute;
+    top: 50%;
+    z-index: 5;
+    display: inline-block;
+}
+
+.carousel-indicators {
+    top: 0.5%;
+    opacity: 0.3;
+}
+
+.carousel-indicators li {
+    margin: 0px;
+    background-color: #020b2a;
+    padding-left: 8%;
+    height: 8px;
+    border: 1px #333 solid;
+}
+
+.carousel-indicators li:hover{
+    background-color: #FFF;
+}
+
+
+.carousel-indicators .active{
+    background-color: #FFF;
+    height: 8px;
+    width: 10px;
+}
+
