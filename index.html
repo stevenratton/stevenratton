@@ -38,7 +38,7 @@
             <main>
                 <div id="presentation">
                     <p>
-                    Hi ! I'm Steven, a French student who loves coding or managing interesting projects, creating graphic picture, logo or flyer but also movie maker.
+                    Hi! I'm Steven, a French student who loves coding or managing interesting projects, creating graphic picture, logo or flyer but also movie maker.
                     </p>
                     <p>
                     I'm following a French Master's Programme with a major in Business and a minor in Informatics.
@@ -52,15 +52,15 @@
                     Feel free to <a target="_blank" href="/">contact me</a>,
                     </p>
 
-                    <div id="pages">
+                    <div class="col-sm-12" id="menu-down">
                         <div class="col-sm-4" id="page">
-                          <a class="scrollTo" href="html">Presentation</a>
+                            <a class="scrollTo" href="html">Presentation</a>
                         </div>
                         <div class="col-sm-4" id="page">
-                          <a class="scrollTo" href="#portfolio">Portfolio</a>
+                            <a class="scrollTo" href="#portfolio">Portfolio</a>
                         </div>
                         <div class="col-sm-4" id="page">
-                          <a class="scrollTo" href="#page-3">Class</a>
+                            <a class="scrollTo" href="#bloc-class">Class</a>
                         </div>
                     </div>
 
@@ -179,7 +179,6 @@
                     </div>
 
                     <script type="text/javascript">afficher_cacher('cache1');</script>
-
                 </div>        
 
 
@@ -460,21 +459,89 @@
                     </div>             
                 </div>
 
-                <div class="col-sm-4" id="page">
-                    <a class="scrollTo" href="html">Presentation</a>
-                </div>
-                <div class="col-sm-4" id="page">
-                    <a class="scrollTo" href="#portfolio">Portfolio</a>
-                </div>
-                <div class="col-sm-4" id="page">
-                    <a class="scrollTo" href="#page-3">Class</a>
+
+                <!-- MOVIES -->   
+                <div class="row" id="portfolio">
+                    <h1>Movies</h1>
+
+                    <div class="container">
+                        <div class="switch">
+                            <div class="switch-back"></div>
+
+                                <input type="radio" class="switch-input" name="switch4" value="off" id="off4" checked>
+                                <label for="off4" class="switch-label-left switch-label-off" onclick="javascript:afficher_cacher('cache4');"><span>Off</span></label>
+                                <div class="label-off"><div>off</div></div>
+                                
+                                <input type="radio" class="switch-input" name="switch4" value="on" id="on4">
+                                <label for="on4" class="switch-label-right switch-label-on" onclick="javascript:afficher_cacher('cache4');"><span>On</span></label>
+                                <div class="label-on"><div>on</div></div>
+
+                                <span class="switch-selection"></span>
+
+                            </div>
+                        </div>
+
+                        <div id="cache4" class="cache4">
+
+                            <div id="slider-img4" class="carousel slide" data-ride="carousel">
+                       
+
+                            </div>
+
+                            <div class="col-sm-6" id="bloc-image">
+                                <div id="information">
+                                    <h5>2015</h5>
+                                    <img alt="" src="img/separate.png" />
+                                    <h5>FVPA france</h5>
+                                </div>
+                                <div id="logoPortfolio">
+                                    <iframe width="100%" height="230px" src="https://www.youtube.com/embed/wgv-s-as26w" frameborder="0" allowfullscreen></iframe>
+                                </div>
+                                 <div id="textPortfolio">
+                                        <h4>World Cup</h4>
+                                </div>
+                            </div>
+                            <div class="col-sm-6" id="bloc-image">
+                                <div id="information">
+                                    <h5>2014</h5>
+                                    <img alt="" src="img/separate.png" />
+                                    <h5>INRIA POTIOC</h5>
+                                </div>
+                                <div id="logoPortfolio">
+                                    <iframe width="100%" height="230px" src="https://www.youtube.com/embed/-CQGss8T4mk" frameborder="0" allowfullscreen></iframe>
+                                </div>
+                                 <div id="textPortfolio">
+                                        <h4>INRIA Team</h4>
+                                </div>
+                            </div>
+                        </div>
+
+                        <script type="text/javascript">afficher_cacher('cache4');</script>
+
+                    </div>             
                 </div>
 
+                <div class="col-sm-12" id="menu-down">
+                    <div class="col-sm-4" id="page">
+                        <a class="scrollTo" href="html">Presentation</a>
+                    </div>
+                    <div class="col-sm-4" id="page">
+                        <a class="scrollTo" href="#portfolio">Portfolio</a>
+                    </div>
+                    <div class="col-sm-4" id="page">
+                        <a class="scrollTo" href="#bloc-class">Class</a>
+                    </div>
+                </div>
+
+
+<!-- PARTIE 3 -->
+                <div class="col-sm-12" id="bloc-class">
+                        <h2>Objectif: L3 MIAGE Bordeaux</h2>
+                </div>
             </main>
-
             <footer>
-
+                <p>Copyright &copy; 2015 &middot; All Rights Reserved &middot; <a href="http://stevenratton.com/" >Steven Ratton</a></p>
             </footer>
-            
         </body>
+
     </html>

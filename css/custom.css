@@ -1,4 +1,5 @@
 
+
 html, body {
     width: 100%;
     height: 100%;
@@ -7,6 +8,7 @@ html, body {
 
 
 body {
+    width: 100%;
     height: 200%;
     color: #616161;
 	  text-rendering: optimizelegibility;
@@ -24,16 +26,22 @@ header {
     margin-bottom: 11px;
     padding-bottom: 11px;
     text-align: center;
-    position: relative;
 }
 
 main {
-  	width: 40%;
+    width: 40%;
+    height: 100%;
     min-width: 320px; 
-  	margin: auto;    
-    padding-top: 40px;
-    padding-bottom: 11px;
-    position: relative;
+    margin: auto;    
+}
+
+footer {
+    width: 40%;
+    min-width: 320px;
+    margin: auto;
+    margin-top: 30%; 
+    border-top: 1px solid #E0E0E0;
+    text-align: center;
 }
 
 #avatar {
@@ -47,6 +55,11 @@ main {
     display: inline-block;
 }
 
+
+#menu-down {
+  margin-top: 5%; 
+  margin-bottom: 10%; 
+}
 
 /**** PRESENTATION ****/
 
@@ -68,8 +81,13 @@ main {
 }
 
 #page {
-    margin-top: 10%; 
+    margin-top: 7%; 
     text-align: center;
+}
+
+
+#class-bloc {
+  margin-top: 13%; 
 }
 
 h1 {
@@ -291,6 +309,15 @@ p {
     border: 2px #dddddd solid;
 }
 
+
+#bloc-class {
+    margin: auto;
+    margin-top: 100px;
+    text-align: center;
+    border: 2px #dddddd solid;
+}
+
+
 #information {
     width: 100%;
     height: 20%;
@@ -338,11 +365,13 @@ p {
 /**** Carousel ****/
 
 
-#slider-img1, #slider-img2, #slider-img3 {
+#slider-img1, #slider-img2, #slider-img3, #slider-img4 {
     width: 100%;
     border: 2px #dddddd solid;
     background-color: #f2f1ef;
 }
+
+
 
 .carousel-control {
     color: #FFF !important;
