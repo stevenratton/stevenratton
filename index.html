@@ -1,16 +1,19 @@
 <!DOCTYPE html>
     <html>
         <head>
+            <meta name="description" content="Steven Ratton's personnel website">
+            <meta name="author" content="Steven Ratton">
             <meta charset="utf-8"></meta>
             <!-- CSS -->
             <link href="./css/bootstrap.min.css" rel="stylesheet"></link>
             <link href="./css/custom.css" rel="stylesheet"></link>
+            <link href="./css/navigation.css" rel="stylesheet"></link>
             <link href="./css/font-awesome.min.css" rel="stylesheet"></link>
             <link href="./css/animate.css" rel="stylesheet"> </link>
-            <link href='http://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
+            <link href='http://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'></link>
 
             <!-- SCRIPT -->
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+            <script type='text/javascript' src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
             <script src="./js/bootstrap.min.js"></script>
             <script type="text/javascript" src="./js/afficher_cacher_div.js"></script>
 
@@ -19,56 +22,110 @@
                 $(document).ready(function() {
                     $('.scrollTo').click( function() { // Au clic sur un élément
                         var page = $(this).attr('href'); // Page cible
-                        var speed = 800; // Durée de l'animation (en ms)
+                        var speed = 200; // Durée de l'animation (en ms)
                         $('html, body').animate( { scrollTop: $(page).offset().top }, speed ); // Go
                         return false;
                     });
                 });
             </script>
-            <title>Steven Ratton</title>
+
+            <script type='text/javascript'>
+            $(function(){ 
+                $(window).scroll(function () {//Au scroll dans la fenetre on déclenche la fonction 
+                    if ($(this).scrollTop() > 999) { //si on a défilé de plus de 974px du haut vers le bas 
+                        $('#navigation-sticky-wrapper').addClass("fixed"); 
+                        $('#navigation').addClass("fixed");
+                    } else { 
+                    $('#navigation-sticky-wrapper').removeClass("fixed");//sinon on retire la classe "fixNavigation" à <div id="navigation"> 
+                    $('#navigation').removeClass("fixed");
+                    } 
+                }); 
+            }); 
+
+            </script>
+
+            <title>Steven Ratton | Personal Website</title>
         </head>
 
         <body>
-            <header>
-                <div id="avatar"></div>
-                <h1>Steven Ratton</h1>
-                <h2>License's student in Master's degree in Business Informatics</h2>
-                <h3>(MIAGE Bordeaux)<h3>
-            </header>
-            <main>
-                <div id="presentation">
-                    <p>
-                    Hi! I'm Steven, a French student who loves coding or managing interesting projects, creating graphic picture, logo or flyer but also movie maker.
-                    </p>
-                    <p>
-                    I'm following a French Master's Programme with a major in Business and a minor in Informatics.
-                    </p>
-                    <p>
-                    Last summer I worked in <a target="_blank" href="http://en.wikipedia.org/wiki/French_Institute_for_Research_in_Computer_Science_and_Automation">French National Institute for computer science and applied mathematics (INRIA)</a> with a research team name <a target="_blank" href="https://team.inria.fr/potioc/">POTIOC</a> and created new logo's team and worked on dice game in augmented reality:
-                    <p>
-                    You can look at some of my works on my <a target="_blank" href="/">portfolio</a>. My resume is available <a target="_blank" href="/">here</a>, I'm also on <a target="_blank" href="https://fr.linkedin.com/pub/steven-ratton/66/915/a82">LinkedIn</a>.
-                    </p>
-                    <p>
-                    Feel free to <a target="_blank" href="/">contact me</a>,
-                    </p>
+            <div id="home">
 
-                    <div class="col-sm-12" id="menu-down">
-                        <div class="col-sm-4" id="page">
-                            <a class="scrollTo" href="html">Presentation</a>
-                        </div>
-                        <div class="col-sm-4" id="page">
-                            <a class="scrollTo" href="#portfolio">Portfolio</a>
-                        </div>
-                        <div class="col-sm-4" id="page">
-                            <a class="scrollTo" href="#bloc-class">Class</a>
+                <div id="separate"></div>
+                <div id="avatar"></div>
+
+                <h1>Steven <span class="text-color">Ratton</span></h1>
+
+                <p>Web development<span class="bullet">•</span>Web Design<span class="bullet">•</span>Software<span class="bullet">•</span>Hardware</p>
+
+                <h2>License's student in Master's degree in Business Informatics</h2>
+
+                <h3>(MIAGE Bordeaux)<h3>
+
+                <a href="#presentation" class="newave-button large outline white">Tell me more</a>
+
+                <div id="separate"></div>
+                
+            </div>
+
+
+            <div id="navigation-sticky-wrapper" class="sticky-wrapper" style="height: 45px;">
+                    <div id="navigation" class="navbar navbar-fixed-top">
+                        <div class="navbar-inner">
+                            <div class="no-padding">
+                        
+                                <a class="show-menu" data-toggle="collapse" data-target=".nav-collapse">
+                                    <span class="show-menu-bar"></span>
+                                </a>
+                            
+                                <div class="navbar-collapse">
+                                    <ul class="nav">
+                                        <li class="menu-1 active"><a class="colapse-menu1" href="#home">Home</a></li>
+                                        <li class="menu-2"><a class="colapse-menu1" href="#presentation">About</a></li>
+                                        <li class="menu-3"><a class="colapse-menu1" href="#portfolio">Portfolio</a></li>
+                                        <li class="menu-5"><a class="colapse-menu1" href="#hobbies">Hobbies</a></li>
+                                        <li class="menu-6"><a class="colapse-menu1" href="#objective">Objective</a></li>
+                                    </ul>
+                                </div>
+
+                            </div>
                         </div>
                     </div>
+            </div>
 
+            <section id="about">
+                 <div class="parallax-overlay">
+
+                    <div id="presentation">
+                        <p>
+                        Hi! I'm Steven, a French student who loves coding or managing interesting projects, creating graphic picture, logo or flyer but also movie maker.
+                        </p>
+                        <p>
+                        I'm following a French Master's Programme with a major in Business and a minor in Informatics.
+                        </p>
+                        <p>
+                        Last summer I worked in <a target="_blank" href="http://en.wikipedia.org/wiki/French_Institute_for_Research_in_Computer_Science_and_Automation">French National Institute for computer science and applied mathematics (INRIA)</a> with a research team name <a target="_blank" href="https://team.inria.fr/potioc/">POTIOC</a> and created new logo's team and worked on dice game in augmented reality:
+                        <p>
+                        You can look at some of my works on my <a target="_blank" href="/">portfolio</a>. My resume is available <a target="_blank" href="/">here</a>, I'm also on <a target="_blank" href="https://fr.linkedin.com/pub/steven-ratton/66/915/a82">LinkedIn</a>.
+                        </p>
+                        <p>
+                        Feel free to <a target="_blank" href="/">contact me</a>,
+                        </p>
+                    </div>
+
+                    
                 </div>
 
+            </section>
+
+            <section id="folio">
                 <!-- GAMING LOGOS -->
                 <div class="row" id="portfolio">
-                    <h1>Gaming Logos</h1>
+                    <h1>Portfolio</h1>
+                    <span class="border"></span>
+
+
+                    <h2>Gaming Logos</h2>
+
                     <div class="container">
                         <div class="switch">
                             <div class="switch-back"></div>
@@ -97,7 +154,7 @@
                                 </ol>
 
 
-                                <div class="carousel-inner" role="listbox">
+                                <div id="test" class="carousel-inner" role="listbox">
                                     <div class="item active">
                                         <img alt="obstruxion" src="./img/obstruxion.png"></img>
                                     </div>
@@ -184,7 +241,7 @@
 
                 <!-- COMPAGNY LOGOS -->   
                 <div class="row" id="portfolio">
-                    <h1>Company Logos</h1>
+                    <h2>Company Logos</h2>
 
                     <div class="container">
                         <div class="switch">
@@ -213,7 +270,7 @@
                                     </ol>
 
 
-                                    <div class="carousel-inner" role="listbox">
+                                    <div id="test" class="carousel-inner" role="listbox">
 
                                         <div class="item active">
                                             <img alt="potioc" src="./img/potioc.png"></img>
@@ -272,7 +329,7 @@
 
                 <!-- FLYERS -->   
                 <div class="row" id="portfolio">
-                    <h1>Flyers</h1>
+                    <h2>Flyers</h2>
 
                     <div class="container">
                         <div class="switch">
@@ -307,7 +364,7 @@
                                     </ol>
 
 
-                                    <div class="carousel-inner" role="listbox">
+                                    <div id="test" class="carousel-inner" role="listbox">
 
                                         <div class="item active">
                                             <img alt="potioc" src="./img/lastnight.png"></img>
@@ -462,7 +519,7 @@
 
                 <!-- MOVIES -->   
                 <div class="row" id="portfolio">
-                    <h1>Movies</h1>
+                    <h2>Movies</h2>
 
                     <div class="container">
                         <div class="switch">
@@ -520,25 +577,33 @@
 
                     </div>             
                 </div>
-
-                <div class="col-sm-12" id="menu-down">
-                    <div class="col-sm-4" id="page">
-                        <a class="scrollTo" href="html">Presentation</a>
-                    </div>
-                    <div class="col-sm-4" id="page">
-                        <a class="scrollTo" href="#portfolio">Portfolio</a>
-                    </div>
-                    <div class="col-sm-4" id="page">
-                        <a class="scrollTo" href="#bloc-class">Class</a>
-                    </div>
-                </div>
-
+            </section>
 
 <!-- PARTIE 3 -->
-                <div class="col-sm-12" id="bloc-class">
-                        <h2>Objectif: MIAGE Bordeaux</h2>
+            <section id="hobbies">
+                <div id="square1" class="col-sm-4">
+                    <h2>Music</h2>
+                    <p>I play guitar since I'm a teen, a lot of music styles  influenced me through all periods of my life</p>
                 </div>
-            </main>
+                <div id="square2" class="col-sm-4">
+                    <h2>Sports</h2>
+                    <p>I am really fan of sports, all kind, specially football (soccer) and Volleyball which I play since I was young. I also watch Rugby, Tennis, athletics, etc...</p>
+                </div>
+                <div id="square3" class="col-sm-4">
+                    <h2>Video games</h2>
+                    <p>Playing is a good way to escape. I love being in competition, strategy is what I prefer to make !</p>
+                </div>
+            </section>
+
+            <section id="objective">
+                <div id="bloc-class" class="col-sm-12">
+                        <h2>Master’s degree in Business Informatics (MIAGE in French) - University of Bordeaux</h2>
+
+                        <h1>[WORK IN PROGRESS...]<h1>
+                </div>
+            </section>
+
+
             <footer>
                 <p>Copyright &copy; 2015 &middot; All Rights Reserved &middot; <a href="http://stevenratton.com/" >Steven Ratton</a></p>
             </footer>
